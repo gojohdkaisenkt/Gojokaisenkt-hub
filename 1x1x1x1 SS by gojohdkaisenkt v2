@@ -287,21 +287,4 @@ end
 SShub.MouseButton1Down:connect(function()
 
 execute("require(6858594080).KrnKidsSus('"..game.Players.LocalPlayer.Name.."')")
-
-local message = Instance.new("Message")
-message.Parent = game.Workspace
-message.Text = "gojohdkaisenkt: 1x1x1x1 load Success"
-
-task.wait(2)
- 
-message:Destroy()
-
-local message = Instance.new("Message")
-message.Parent = game.Workspace
-message.Text = "1x1x1x1: haha destroy game with me😈"
-
-task.wait(2)
- 
-message:Destroy()
-
 end)

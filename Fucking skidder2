@@ -1,0 +1,588 @@
+
+
+
+
+
+
+
+
+      		local gui = Instance.new("ScreenGui")
+gui.Name = "c00lgui"
+gui.Parent = game.CoreGui
+
+local Ui = Instance.new("Frame")
+Ui.Size = UDim2.new(0.6, 12, 0.9, 69)
+Ui.Position = UDim2.new(0.2, 0, 0.0, 0)
+Ui.BackgroundColor3 = Color3.new(0, 0, 0)
+Ui.BorderColor3 = Color3.new(255, 0, 0, 0)
+Ui.BorderSizePixel = 3
+Ui.Active = true
+Ui.BackgroundTransparency = 0 
+Ui.Draggable = true
+Ui.Visible = false
+Ui.Parent = gui
+
+local script = Instance.new("Frame")
+script.Size = UDim2.new(0.6, 12, 0.9, 69)
+script.Position = UDim2.new(0.2, 0, 0.0, 0)
+script.BackgroundColor3 = Color3.new(0, 0, 0)
+script.BorderColor3 = Color3.new(255, 0, 0, 0)
+script.BorderSizePixel = 3
+script.Active = true
+script.BackgroundTransparency = 0 
+script.Draggable = true
+script.Visible = false
+script.Parent = gui
+
+local Ho = Instance.new("Frame")
+Ho.Size = UDim2.new(0.6, 12, 0.9, 69)
+Ho.Position = UDim2.new(0.2, 0, 0.0, 0)
+Ho.BackgroundColor3 = Color3.new(0, 0, 0)
+Ho.BorderColor3 = Color3.new(255, 0, 0, 0)
+Ho.BorderSizePixel = 3
+Ho.Active = true
+Ho.BackgroundTransparency = 0 
+Ho.Draggable = true
+Ho.Visible = true
+Ho.Parent = gui
+
+local credit = Instance.new("Frame")
+credit.Size = UDim2.new(0.6, 12, 0.9, 69)
+credit.Position = UDim2.new(0.2, 0, 0.0, 0)
+credit.BackgroundColor3 = Color3.new(0, 0, 0)
+credit.BorderColor3 = Color3.new(255, 0, 0, 0)
+credit.BorderSizePixel = 3
+credit.Active = true
+credit.BackgroundTransparency = 0 
+credit.Draggable = true
+credit.Visible = false
+credit.Parent = gui
+
+local code = Instance.new("Frame")
+code.Size = UDim2.new(0.6, 12, 0.9, 69)
+code.Position = UDim2.new(0.2, 0, 0.0, 0)
+code.BackgroundColor3 = Color3.new(0, 0, 0)
+code.BorderColor3 = Color3.new(255, 0, 0, 0)
+code.BorderSizePixel = 3
+code.Active = true
+code.BackgroundTransparency = 0 
+code.Draggable = true
+code.Visible = false
+code.Parent = gui
+
+local TextLabel = Instance.new("TextLabel")
+TextLabel.Size = UDim2.new(0.9, 45, 0.0, 26)
+TextLabel.Position = UDim2.new(0.0, 0, 0.0, 0)
+TextLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel.BorderColor3 = Color3.new(255, 0, 0, 0)
+TextLabel.BorderSizePixel = 3
+TextLabel.Text = ""
+TextLabel.BackgroundTransparency = 0 
+TextLabel.TextColor3 = Color3.new(1, 1, 1)
+TextLabel.Font = Enum.Font.Code
+TextLabel.Parent = Ho
+TextLabel.TextSize = 19
+
+local text1 = Instance.new("TextLabel")
+text1.Size = UDim2.new(0.1, 34, 0.2, 0)
+text1.Position = UDim2.new(0.3, 3, 0.3, 3)
+text1.BackgroundColor3 = Color3.new(0, 0, 0)
+text1.BorderColor3 = Color3.new(0, 0, 0)
+text1.BorderSizePixel = 0
+text1.Text = "c00lgui reborn by gojohdkaisenkt"
+text1.BackgroundTransparency = 0 
+text1.TextColor3 = Color3.new(255, 255, 255)
+text1.Font = Enum.Font.Code
+text1.Parent = TextLabel
+text1.TextSize = 19
+
+local X = Instance.new("TextButton")
+X.Size = UDim2.new(0.0, 28, 0.9, 2)
+X.Position = UDim2.new(0.9, 18, 0.0, 0)
+X.BackgroundColor3 = Color3.new(0, 0, 0)
+X.BorderColor3 = Color3.new(255, 0, 0, 0)
+X.BorderSizePixel = 3
+X.Text = "X"
+X.BackgroundTransparency = 0 
+X.TextColor3 = Color3.new(255, 255, 255)
+X.Font = Enum.Font.Code
+X.Parent = TextLabel
+X.TextSize = 25
+
+local idk = Instance.new("Frame")
+idk.Size = UDim2.new(0.0, 28, 0.9, 2)
+idk.Position = UDim2.new(0.8, 32, 0.0, 0)
+idk.BackgroundColor3 = Color3.new(0, 0, 0)
+idk.BorderColor3 = Color3.new(255, 0, 0, 0)
+idk.BorderSizePixel = 3
+idk.Active = false
+idk.BackgroundTransparency = 0 
+idk.Visible = false
+idk.Draggable = true
+idk.Parent = TextLabel
+
+local so = Instance.new("Frame")
+so.Size = UDim2.new(0.2, 7, 0.5, 1)
+so.Position = UDim2.new(0.3, 0, 0.2, 0)
+so.BackgroundColor3 = Color3.new(0, 0, 0)
+so.BorderColor3 = Color3.new(1, 1, 1)
+so.BorderSizePixel = 1
+so.Active = false
+so.BackgroundTransparency = 0 
+so.Draggable = true
+so.Visible = false
+so.Parent = idk
+
+local Kl = Instance.new("TextButton")
+Kl.Size = UDim2.new(0.0, 28, 0.9, 2)
+Kl.Position = UDim2.new(0.8, 2, 0.0, 0)
+Kl.BackgroundColor3 = Color3.new(0, 0, 0)
+Kl.BorderColor3 = Color3.new(255, 0, 0, 0)
+Kl.BorderSizePixel = 3
+Kl.Text = "-"
+Kl.BackgroundTransparency = 0 
+Kl.TextColor3 = Color3.new(255, 255, 255)
+Kl.Font = Enum.Font.Code
+Kl.Parent = TextLabel
+Kl.TextSize = 24
+
+local Home = Instance.new("TextButton")
+Home.Size = UDim2.new(0.2, 9, 0.0, 29)
+Home.Position = UDim2.new(0.0, 0, 0.0, 29)
+Home.BackgroundColor3 = Color3.new(0, 0, 0)
+Home.BorderColor3 = Color3.new(255, 0, 0, 0)
+Home.BorderSizePixel = 3
+Home.Text = "Home"
+Home.BackgroundTransparency = 0 
+Home.TextColor3 = Color3.new(255, 255, 255)
+Home.Font = Enum.Font.Code
+Home.Parent = Ho
+Home.TextSize = 20
+
+local script2 = Instance.new("TextButton")
+script2.Size = UDim2.new(0.2, 9, 0.0, 29)
+script2.Position = UDim2.new(0.0, 0, 0.0, 70)
+script2.BackgroundColor3 = Color3.new(0, 0, 0)
+script2.BorderColor3 = Color3.new(255, 0, 0, 0)
+script2.BorderSizePixel = 3
+script2.Text = "skybox"
+script2.BackgroundTransparency = 0 
+script2.TextColor3 = Color3.new(255, 255, 255)
+script2.Font = Enum.Font.Code
+script2.Parent = script
+script2.TextSize = 20
+
+local script3 = Instance.new("TextButton")
+script3.Size = UDim2.new(0.2, 9, 0.0, 29)
+script3.Position = UDim2.new(0.0, 110, 0.0, 70)
+script3.BackgroundColor3 = Color3.new(0, 0, 0)
+script3.BorderColor3 = Color3.new(255, 0, 0, 0)
+script3.BorderSizePixel = 3
+script3.Text = "local face"
+script3.BackgroundTransparency = 0 
+script3.TextColor3 = Color3.new(255, 255, 255)
+script3.Font = Enum.Font.Code
+script3.Parent = script
+script3.TextSize = 20
+
+local script4 = Instance.new("TextButton")
+script4.Size = UDim2.new(0.2, 9, 0.0, 29)
+script4.Position = UDim2.new(0.0, 220, 0.0, 70)
+script4.BackgroundColor3 = Color3.new(0, 0, 0)
+script4.BorderColor3 = Color3.new(255, 0, 0, 0)
+script4.BorderSizePixel = 3
+script4.Text = "decal spam"
+script4.BackgroundTransparency = 0 
+script4.TextColor3 = Color3.new(255, 255, 255)
+script4.Font = Enum.Font.Code
+script4.Parent = script
+script4.TextSize = 20
+
+local Box2 = Instance.new("TextBox")
+Box2.Size = UDim2.new(0.2, 9, 0.0, 10)
+Box2.Position = UDim2.new(0.0, 0, 0.0, 100)
+Box2.BackgroundColor3 = Color3.new(0, 0, 0)
+Box2.BorderColor3 = Color3.new(255, 0, 0, 0)
+Box2.BorderSizePixel = 3
+Box2.Text = "123694661930746"
+Box2.TextColor3 = Color3.new(1, 1, 1)
+Box2.BackgroundTransparency = 0
+Box2.Font = Enum.Font.Code
+Box2.TextSize = 15
+Box2.Parent = script
+Box2.TextYAlignment = Enum.TextYAlignment.Top
+Box2.TextXAlignment = Enum.TextXAlignment.Left
+Box2.ClearTextOnFocus = failed
+Box2.TextWrapped = true
+
+local server = Instance.new("TextButton")
+server.Size = UDim2.new(0.2, 25, 0.0, 29)
+server.Position = UDim2.new(0.1, 58, 0.0, 29)
+server.BackgroundColor3 = Color3.new(0, 0, 0)
+server.BorderColor3 = Color3.new(255, 0, 0, 0)
+server.BorderSizePixel = 3
+server.Text = "script"
+server.BackgroundTransparency = 0 
+server.TextColor3 = Color3.new(255, 255, 255)
+server.Font = Enum.Font.Code
+server.Parent = Ho
+server.TextSize = 18
+
+local scr = Instance.new("TextButton")
+scr.Size = UDim2.new(0.2, 0, 0.0, 29)
+scr.Position = UDim2.new(0.3, 85, 0.0, 29)
+scr.BackgroundColor3 = Color3.new(0, 0, 0)
+scr.BorderColor3 = Color3.new(255, 0, 0, 0)
+scr.BorderSizePixel = 3
+scr.Text = "sever/local"
+scr.BackgroundTransparency = 0 
+scr.TextColor3 = Color3.new(255, 255, 255)
+scr.Font = Enum.Font.Code
+scr.Parent = Ho
+scr.TextSize = 19
+  
+local exe = Instance.new("TextButton")
+exe.Size = UDim2.new(0.1, 34, 0.0, 29)
+exe.Position = UDim2.new(0.6, 39, 0.0, 29)
+exe.BackgroundColor3 = Color3.new(0, 0, 0)
+exe.BorderColor3 = Color3.new(255, 0, 0, 0)
+exe.BorderSizePixel = 3
+exe.Text = "Executor"
+exe.BackgroundTransparency = 0 
+exe.TextColor3 = Color3.new(255, 255, 255)
+exe.Font = Enum.Font.Code
+exe.Parent = Ho
+exe.TextSize = 19
+
+local out = Instance.new("TextButton")
+out.Size = UDim2.new(0.1, 15, 0.0, 29)
+out.Position = UDim2.new(0.8, 30, 0.0, 29)
+out.BackgroundColor3 = Color3.new(0, 0, 0)
+out.BorderColor3 = Color3.new(255, 0, 0)
+out.BorderSizePixel = 3
+out.Text = "cre"
+out.BackgroundTransparency = 0 
+out.TextColor3 = Color3.new(255, 255, 255)
+out.Font = Enum.Font.Code
+out.Parent = Ho
+out.TextSize = 19
+
+local Box = Instance.new("TextBox")
+Box.Size = UDim2.new(0.9, 35, 0.6, 15)
+Box.Position = UDim2.new(0.0, 5, 0.2, 0)
+Box.BackgroundColor3 = Color3.new(0, 0, 0)
+Box.BorderColor3 = Color3.new(255, 0, 0, 0)
+Box.BorderSizePixel = 3
+Box.Text = "Made by gojohdkaisenkt"
+Box.TextColor3 = Color3.new(1, 1, 1)
+Box.BackgroundTransparency = 0
+Box.Font = Enum.Font.Code
+Box.TextSize = 15
+Box.Parent = Ui
+Box.TextYAlignment = Enum.TextYAlignment.Top
+Box.TextXAlignment = Enum.TextXAlignment.Left
+Box.ClearTextOnFocus = failed
+Box.TextWrapped = true
+
+
+
+local execu = Instance.new("TextButton")
+execu.Size = UDim2.new(0.2, 0, 0.1, 0)
+execu.Position = UDim2.new(0.0, 5, 0.8, 27)
+execu.BackgroundColor3 = Color3.new(0, 0, 0)
+execu.BorderColor3 = Color3.new(255, 0, 0, 0)
+execu.BorderSizePixel = 3
+execu.Text = "Execute"
+execu.BackgroundTransparency = 0 
+execu.TextColor3 = Color3.new(255, 255, 255)
+execu.Font = Enum.Font.Code
+execu.Parent = Ui
+execu.TextSize = 19
+
+local clea = Instance.new("TextButton")
+clea.Size = UDim2.new(0.2, 0, 0.1, 0)
+clea.Position = UDim2.new(0.2, 19, 0.8, 27)
+clea.BackgroundColor3 = Color3.new(0, 0, 0)
+clea.BorderColor3 = Color3.new(255, 0, 0, 0)
+clea.BorderSizePixel = 3
+clea.Text = "Clear"
+clea.BackgroundTransparency = 0 
+clea.TextColor3 = Color3.new(255, 255, 255)
+clea.Font = Enum.Font.Code
+clea.Parent = Ui
+clea.TextSize = 19
+
+local Image = Instance.new("ImageLabel")
+Image.Parent = credit
+Image.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+Image.BorderColor3 = Color3.new(0, 0, 0, 0)
+Image.Position = UDim2.new(0.0, 5, 0.2, 0)
+Image.Size = UDim2.new(0.9, 35, 0.6, 15)
+
+Image.Image = "http://www.roblox.com/asset/?id=123694661930746"
+
+local player = game:GetService("Players").LocalPlayer
+if not player then
+    print("Không tìm thấy LocalPlayer!")
+    return
+end
+
+-- Tạo ImageLabel để hiển thị ảnh đại diện
+local imageLabel = Instance.new("ImageLabel")
+imageLabel.Size = UDim2.new(0, 150, 0, 150)
+imageLabel.Position = UDim2.new(0.0, 0, 0.0, 70)
+imageLabel.BackgroundColor3 = Color3.new(1, 1, 1)
+imageLabel.BorderSizePixel = 1
+imageLabel.Parent = Ho
+
+-- Lấy URL ảnh avatar headshot
+local userId = player.UserId
+local avatarUrl = "https://www.roblox.com/headshot-thumbnail/image?userId=" .. userId .. "&width=150&height=150&format=png"
+
+-- Gán URL vào ImageLabel
+imageLabel.Image = avatarUrl
+
+print("Đã tạo GUI hiển thị avatar!")
+
+local TextLabel2 = Instance.new("TextLabel")
+TextLabel2.Size = UDim2.new(0.64, 0, 0.1, 0)
+TextLabel2.Position = UDim2.new(0.0, 160, 0.0, 70)
+TextLabel2.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel2.BorderColor3 = Color3.new(0, 0, 0, 0)
+TextLabel2.BorderSizePixel = 3
+TextLabel2.Text = "loading..."
+TextLabel2.BackgroundTransparency = 0 
+TextLabel2.TextColor3 = Color3.new(255, 255, 255)
+TextLabel2.Font = Enum.Font.Code
+TextLabel2.Parent = Ho
+TextLabel2.TextSize = 19
+
+for i = 0, 100, 5 do
+	TextLabel2.Text = "Loading... " .. i .. "%"
+	wait(0.1)
+end
+
+wait(0.5)
+TextLabel2.Text = "loading Success"
+wait(1)
+TextLabel2.Text = "now, you can enjoy it"
+
+local TextLabel1 = Instance.new("TextLabel")
+TextLabel1.Size = UDim2.new(0.64, 0, 0.2, 0)
+TextLabel1.Position = UDim2.new(0.0, 160, 0.0, 80)
+TextLabel1.BackgroundColor3 = Color3.new(0, 0, 0)
+TextLabel1.BorderColor3 = Color3.new(0, 0, 0, 0)
+TextLabel1.BorderSizePixel = 0
+TextLabel1.Text = "name plr: "..game.Players.LocalPlayer.Name..""
+TextLabel1.BackgroundTransparency = 1
+TextLabel1.TextColor3 = Color3.new(255, 255, 255)
+TextLabel1.Font = Enum.Font.Code
+TextLabel1.Parent = Ho
+TextLabel1.TextSize = 19
+
+local Text0 = Instance.new("TextLabel")
+Text0.Size = UDim2.new(0.64, 0, 0.2, 0)
+Text0.Position = UDim2.new(0.0, 160, 0.0, 100)
+Text0.BackgroundColor3 = Color3.new(0, 0, 0)
+Text0.BorderColor3 = Color3.new(0, 0, 0, 0)
+Text0.BorderSizePixel = 0
+Text0.Text = "age account: "..game.Players.LocalPlayer.AccountAge.."day"
+Text0.BackgroundTransparency = 1
+Text0.TextColor3 = Color3.new(255, 255, 255)
+Text0.Font = Enum.Font.Code
+Text0.Parent = Ho
+Text0.TextSize = 19
+
+local Text01 = Instance.new("TextLabel")
+Text01.Size = UDim2.new(0.64, 0, 0.2, 0)
+Text01.Position = UDim2.new(0.0, 160, 0.0, 120)
+Text01.BackgroundColor3 = Color3.new(0, 0, 0)
+Text01.BorderColor3 = Color3.new(0, 0, 0, 0)
+Text01.BorderSizePixel = 0
+Text01.Text = "ID account: "..game.Players.LocalPlayer.UserId..""
+Text01.BackgroundTransparency = 1
+Text01.TextColor3 = Color3.new(255, 255, 255)
+Text01.Font = Enum.Font.Code
+Text01.Parent = Ho
+Text01.TextSize = 19
+
+---Scripts:
+
+X.MouseButton1Click:Connect(function()
+Ui:remove()
+script:remove()
+Ho:remove()
+credit:remove()
+end)
+
+clea.MouseButton1Click:Connect(function()
+Box.Text = ""
+end)
+
+execu.MouseButton1Click:Connect(function()
+assert(loadstring(Box.Text))()
+end)
+  	
+script2.MouseButton1Click:Connect(function()
+
+local s = Instance.new("Sky")
+s.Name = "Sky"
+s.Parent = game.Lighting
+local skyboxID = ""..Box2.Text..""
+s.SkyboxBk = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxDn = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxFt = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxLf = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxRt = "http://www.roblox.com/asset/?id="..skyboxID
+s.SkyboxUp = "http://www.roblox.com/asset/?id="..skyboxID
+game.Lighting.TimeOfDay = 12
+
+    end)
+
+script3.MouseButton1Click:Connect(function()
+local script = Instance.new('Script', script3)
+
+	function click()
+		for i,v in pairs(game.Players:GetChildren()) do
+			if v.Character:FindFirstChild("Head") then
+				gui1=Instance.new("BillboardGui")
+				gui1.Parent = v.Character.Head
+				gui1.Adornee = v.Character.Head
+				gui1.Size=UDim2.new(2.5,0,2.5,0)
+				gui1.StudsOffset=Vector3.new(0,0.2,0)
+				gui1.AlwaysOnTop = true
+				text1=Instance.new("ImageLabel")
+				text1.Image = "http://www.roblox.com/asset/?id="..Box2.Text..""
+				text1.Size=UDim2.new(1,0,1,0)
+				text1.Position=UDim2.new(0,0,0,0)
+				text1.BackgroundTransparency = 1
+				text1.Parent=gui1
+				v.Character.Head.Transparency = 1
+			end
+		end
+	end
+	
+	script.Parent.MouseButton1Down:connect(click)
+end)
+script4.MouseButton1Click:Connect(function()
+ decalID = ""..Box2.Text..""
+function exPro(root)
+for _, v in pairs(root:GetChildren()) do
+if v:IsA("Decal") and v.Texture ~= "http://www.roblox.com/asset/?id="..decalID then
+v.Parent = nil
+elseif v:IsA("BasePart") then
+v.Material = "Plastic"
+v.Transparency = 0
+local One = Instance.new("Decal", v)
+local Two = Instance.new("Decal", v)
+local Three = Instance.new("Decal", v)
+local Four = Instance.new("Decal", v)
+local Five = Instance.new("Decal", v)
+local Six = Instance.new("Decal", v)
+One.Texture = "http://www.roblox.com/asset/?id="..decalID
+Two.Texture = "http://www.roblox.com/asset/?id="..decalID
+Three.Texture = "http://www.roblox.com/asset/?id="..decalID
+Four.Texture = "http://www.roblox.com/asset/?id="..decalID
+Five.Texture = "http://www.roblox.com/asset/?id="..decalID
+Six.Texture = "http://www.roblox.com/asset/?id="..decalID
+One.Face = "Front"
+Two.Face = "Back"
+Three.Face = "Right"
+Four.Face = "Left"
+Five.Face = "Top"
+Six.Face = "Bottom"
+end
+exPro(v)
+end
+end
+function asdf(root)
+for _, v in pairs(root:GetChildren()) do
+asdf(v)
+end
+end
+exPro(game.Workspace)
+asdf(game.Workspace)
+  end)
+-- Danh sách tất cả các frame
+local allFrames = {Ui, Ho, script, credit,code}
+
+-- Hàm ẩn tất cả các frame
+local function hideAllFrames()
+	for _, frame in pairs(allFrames) do
+		frame.Visible = false
+	end
+end
+
+-- Hàm hiển thị một frame và đồng bộ vị trí
+local function showFrame(targetFrame)
+	-- Tìm frame đang hiển thị (frame cũ)
+	local currentPosition = nil
+	for _, frame in pairs(allFrames) do
+		if frame.Visible then
+			currentPosition = frame.Position
+			break
+		end
+	end
+
+	-- Ẩn tất cả
+	hideAllFrames()
+
+	-- Đồng bộ vị trí nếu có frame cũ
+	if currentPosition then
+		targetFrame.Position = currentPosition
+	end
+
+	-- Hiển thị frame mới
+	targetFrame.Visible = true
+end
+
+-- Kết nối nút
+exe.MouseButton1Click:Connect(function()
+	showFrame(Ui)
+Home.Parent = Ui
+TextLabel.Parent = Ui
+out.Parent = Ui
+server.Parent = Ui
+exe.Parent = Ui
+scr.Parent = Ui
+end)
+
+Home.MouseButton1Click:Connect(function()
+	showFrame(Ho)
+Home.Parent = Ho
+TextLabel.Parent = Ho
+out.Parent = Ho
+server.Parent = Ho
+exe.Parent = Ho
+scr.Parent = Ho
+end)
+
+scr.MouseButton1Click:Connect(function()
+	showFrame(script)
+Home.Parent = script
+TextLabel.Parent = script
+out.Parent = script
+server.Parent = script
+exe.Parent = script
+scr.Parent = script
+end)
+
+out.MouseButton1Click:Connect(function()
+	showFrame(credit)
+Home.Parent = credit
+TextLabel.Parent = credit
+out.Parent = credit
+server.Parent = credit
+exe.Parent = credit
+scr.Parent = credit
+end)
+
+server.MouseButton1Click:Connect(function()
+	showFrame(code)
+Home.Parent = code
+TextLabel.Parent = code
+out.Parent = code
+server.Parent = code
+exe.Parent = code
+scr.Parent = code
+end)

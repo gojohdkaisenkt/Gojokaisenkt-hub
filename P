@@ -1,11 +1,4 @@
 
-
-
-
-
-
-
-
       		local gui = Instance.new("ScreenGui")
 gui.Name = "c00lgui"
 gui.Parent = game.CoreGui
@@ -638,4 +631,657 @@ local Five = Instance.new("Decal", v)
 local Six = Instance.new("Decal", v)
 One.Texture = "http://www.roblox.com/asset/?id="..decalID
 Two.Texture = "http://www.roblox.com/asset/?id="..decalID
-Three.Text
+Three.Texture = "http://www.roblox.com/asset/?id="..decalID
+Four.Texture = "http://www.roblox.com/asset/?id="..decalID
+Five.Texture = "http://www.roblox.com/asset/?id="..decalID
+Six.Texture = "http://www.roblox.com/asset/?id="..decalID
+One.Face = "Front"
+Two.Face = "Back"
+Three.Face = "Right"
+Four.Face = "Left"
+Five.Face = "Top"
+Six.Face = "Bottom"
+end
+exPro(v)
+end
+end
+function asdf(root)
+for _, v in pairs(root:GetChildren()) do
+asdf(v)
+end
+end
+exPro(game.Workspace)
+asdf(game.Workspace)
+  end)
+-- Danh sách tất cả các frame
+local allFrames = {Ui, Ho, script, credit,code}
+
+-- Hàm ẩn tất cả các frame
+local function hideAllFrames()
+	for _, frame in pairs(allFrames) do
+		frame.Visible = false
+	end
+end
+
+-- Hàm hiển thị một frame và đồng bộ vị trí
+local function showFrame(targetFrame)
+	-- Tìm frame đang hiển thị (frame cũ)
+	local currentPosition = nil
+	for _, frame in pairs(allFrames) do
+		if frame.Visible then
+			currentPosition = frame.Position
+			break
+		end
+	end
+
+	-- Ẩn tất cả
+	hideAllFrames()
+
+	-- Đồng bộ vị trí nếu có frame cũ
+	if currentPosition then
+		targetFrame.Position = currentPosition
+	end
+
+	-- Hiển thị frame mới
+	targetFrame.Visible = true
+end
+
+-- Kết nối nút
+exe.MouseButton1Click:Connect(function()
+	showFrame(Ui)
+Home.Parent = Ui
+TextLabel.Parent = Ui
+out.Parent = Ui
+server.Parent = Ui
+exe.Parent = Ui
+scr.Parent = Ui
+end)
+
+Home.MouseButton1Click:Connect(function()
+	showFrame(Ho)
+Home.Parent = Ho
+TextLabel.Parent = Ho
+out.Parent = Ho
+server.Parent = Ho
+exe.Parent = Ho
+scr.Parent = Ho
+end)
+
+scr.MouseButton1Click:Connect(function()
+	showFrame(script)
+Home.Parent = script
+TextLabel.Parent = script
+out.Parent = script
+server.Parent = script
+exe.Parent = script
+scr.Parent = script
+end)
+
+out.MouseButton1Click:Connect(function()
+	showFrame(credit)
+Home.Parent = credit
+TextLabel.Parent = credit
+out.Parent = credit
+server.Parent = credit
+exe.Parent = credit
+scr.Parent = credit
+end)
+
+server.MouseButton1Click:Connect(function()
+	showFrame(code)
+Home.Parent = code
+TextLabel.Parent = code
+out.Parent = code
+server.Parent = code
+exe.Parent = code
+scr.Parent = code
+end)
+script5.MouseButton1Click:Connect(function()
+
+
+
+
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+for _, player in pairs(Players:GetPlayers()) do
+    if player.Character then
+        -- Thay đổi tên model trong workspace CHỈ trên client (LocalScript)
+        -- Nhưng thực ra đây chỉ là đổi tên đối tượng trong client thôi, không ảnh hưởng server
+        player.Character.Name = ""..game.Players.LocalPlayer.Name.." is c00lkidds! ! ! god! !"
+
+        -- Hoặc đổi humanoid.DisplayName chỉ trên client
+        local humanoid = player.Character:FindFirstChildOfClass("Humanoid")
+        if humanoid then
+            humanoid.DisplayName = ""..game.Players.LocalPlayer.Name.." is c00lkidds ! ! ! god! ! !"
+        end
+    end
+end
+
+   end)
+script0.MouseButton1Click:Connect(function()
+ local s = Instance.new("Sound")
+
+	s.Name = "Sound"
+	s.SoundId = "http://www.roblox.com/asset/?id=95156028272944"
+	s.Volume = 9999999
+	s.Pitch = 0.1
+	s.Looped = true
+	s.archivable = false
+
+	s.Parent = game.Workspace
+
+	wait(1)
+
+	s:play()
+end)
+script01.MouseButton1Click:Connect(function()
+
+local killerName = ""..game.Players.LocalPlayer.Name.."" -- thay bằng tên người chơi được phép dùng lệnh
+
+for _, player in pairs(game.Players:GetPlayers()) do
+    if player.Name ~= killerName then
+        if player.Character and player.Character:FindFirstChild("Humanoid") then
+            player.Character.Humanoid.Health = 0
+        end
+    end
+end
+    end)
+script02.MouseButton1Click:Connect(function()
+   
+for _, player in pairs(game.Players:GetPlayers()) do
+
+            player:Kick("sever shutdown by "..game.Players.LocalPlayer.Name.."")
+
+       end
+ end)
+script03.MouseButton1Click:Connect(function()
+
+ for _, part in pairs(workspace:GetDescendants()) do
+    if part:IsA("BasePart") then
+        part.Anchored = false
+    end
+end
+end)
+script04.MouseButton1Click:Connect(function()
+
+local baseplate = Instance.new("Part")
+baseplate.Name = "Baseplate"
+baseplate.Size = Vector3.new(512, 5, 512)  -- Kích thước lớn, phẳng
+baseplate.Position = Vector3.new(0, -2.5, 0) -- Nằm ở gốc tọa độ
+baseplate.Anchored = true
+baseplate.TopSurface = Enum.SurfaceType.Smooth
+baseplate.BottomSurface = Enum.SurfaceType.Smooth
+baseplate.Material = Enum.Material.Concrete
+baseplate.Color = Color3.fromRGB(163, 162, 165) -- Màu xám giống baseplate mặc định
+baseplate.Parent = workspace
+   end)
+
+script05.MouseButton1Click:Connect(function()
+  
+
+
+
+local function createBuilding(position)
+	local model = Instance.new("Model")
+	model.Name = "Building"
+	model.Parent = workspace
+
+	local base = Instance.new("Part")
+	base.Size = Vector3.new(20, 1, 20)
+	base.Position = position + Vector3.new(0, 0.5, 0)
+	base.Anchored = true
+	base.Color = Color3.fromRGB(100, 100, 100)
+	base.Parent = model
+
+	local building = Instance.new("Part")
+	building.Size = Vector3.new(20, math.random(20, 50), 20)
+	building.Position = position + Vector3.new(0, building.Size.Y / 2 + 1, 0)
+	building.Anchored = true
+	building.Color = Color3.fromRGB(math.random(100,255), math.random(100,255), math.random(100,255))
+	building.Material = Enum.Material.Concrete
+	building.Parent = model
+end
+
+local function createRoad(position, isHorizontal)
+	local road = Instance.new("Part")
+	road.Size = isHorizontal and Vector3.new(4, 1, 24) or Vector3.new(24, 1, 4)
+	road.Position = position + Vector3.new(0, 0.5, 0)
+	road.Anchored = true
+	road.Color = Color3.fromRGB(50, 50, 50)
+	road.Material = Enum.Material.Asphalt
+	road.Parent = workspace
+end
+
+-- Sinh thành phố theo lưới 5x5
+local gridSize = 30
+local citySize = 5
+
+for x = 0, citySize - 1 do
+	for z = 0, citySize - 1 do
+		local pos = Vector3.new(x * gridSize, 0, z * gridSize)
+
+		-- Xác suất: chừa đường xen kẽ
+		if x % 2 == 1 or z % 2 == 1 then
+			-- Đường
+			createRoad(pos, x % 2 == 1)
+		else
+			-- Nhà
+			createBuilding(pos)
+		end
+	end
+end
+local CityGenerator = require(path.to.CityGenerator)
+
+-- Tạo thành phố 5x5 grid, mỗi cell rộng 30 studs
+CityGenerator:Generate(5, 30)
+
+local function createSpecialBuilding(position, name, color)
+	local part = Instance.new("Part")
+	part.Name = name
+	part.Size = Vector3.new(25, 15, 25)
+	part.Position = position + Vector3.new(0, 7.5, 0)
+	part.Anchored = true
+	part.Color = color
+	part.Material = Enum.Material.SmoothPlastic
+	part.Parent = workspace
+
+	local label = Instance.new("BillboardGui", part)
+	label.Size = UDim2.new(0, 200, 0, 50)
+	label.StudsOffset = Vector3.new(0, 10, 0)
+	label.AlwaysOnTop = true
+
+	local text = Instance.new("TextLabel", label)
+	text.Size = UDim2.new(1, 0, 1, 0)
+	text.Text = name
+	text.TextScaled = true
+	text.BackgroundTransparency = 1
+	text.TextColor3 = Color3.new(1, 1, 1)
+end
+
+local function createStreetLamp(position)
+	local lamp = Instance.new("Model")
+	lamp.Name = "StreetLamp"
+	lamp.Parent = workspace
+
+	local pole = Instance.new("Part")
+	pole.Size = Vector3.new(0.5, 10, 0.5)
+	pole.Position = position + Vector3.new(0, 5, 0)
+	pole.Anchored = true
+	pole.Color = Color3.fromRGB(50, 50, 50)
+	pole.Parent = lamp
+
+	local light = Instance.new("Part")
+	light.Size = Vector3.new(2, 0.5, 2)
+	light.Position = position + Vector3.new(0, 10.5, 0)
+	light.Anchored = true
+	light.Color = Color3.fromRGB(255, 255, 150)
+	light.Material = Enum.Material.Neon
+	light.Parent = lamp
+end
+   end)
+script50.MouseButton1Click:Connect(function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/retpirato/Roblox-Scripts/refs/heads/master/Grab%20Knife%20V4.lua"))()
+   end)
+script40.MouseButton1Click:Connect(function()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/nicolasbarbosa323/metal-pip/refs/heads/main/john_doe_with_esp.lua"))()
+   end)
+script30.MouseButton1Click:Connect(function()
+
+
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character
+repeat wait() character = player.Character until character
+local mouse = player:GetMouse()
+
+local tool = Instance.new("Tool",player.Backpack)
+tool.Name = "UZI"
+tool.GripForward = Vector3.new(0, 0, 0)
+tool.GripPos = Vector3.new(0, -0.3, 0)
+tool.GripRight = Vector3.new(0, 0, 0)
+tool.GripUp = Vector3.new(0, 0, 1)
+
+local handle = Instance.new("Part",tool)
+handle.Name = "Handle"
+handle.Size = Vector3.new(0.2, 1.7, 1.4)
+local mesh  = Instance.new("SpecialMesh",handle)
+mesh.MeshId = "http://www.roblox.com/asset/?id=72012794"
+mesh.Scale = Vector3.new(0.6, 0.6, 0.6)
+mesh.TextureId = "http://www.roblox.com/asset/?id=72012761"
+
+local sound = Instance.new("Sound",handle)
+sound.SoundId = "http://www.roblox.com/asset/?id=27127089"
+sound.Volume = 1
+
+local mouseDown = false
+local equipped = false
+
+function auto()
+	while equipped and mouseDown and wait(0.1) do
+		local current = sound:Clone()
+		current.Parent = handle
+		current:Play()
+		game.Debris:AddItem(current,1)		
+	
+		local ray = Ray.new(handle.CFrame.p,(mouse.Hit.p - handle.CFrame.p).unit*900)
+		local hit,pos = workspace:FindPartOnRay(ray,character)
+		
+		local beam = Instance.new("Part", character)
+		beam.BrickColor = BrickColor.new("Bright yellow")
+		beam.FormFactor = "Custom"
+		beam.Material = "Neon"
+		beam.Transparency = 0.25
+		beam.Anchored = true
+		beam.Locked = true
+		beam.CanCollide = false
+ 
+		local distance = (tool.Handle.CFrame.p - pos).magnitude
+		beam.Size = Vector3.new(0.1, 0.1, distance)
+		beam.CFrame = CFrame.new(tool.Handle.CFrame.p, pos) * CFrame.new(0, 0, -distance / 2)
+		
+		game:GetService("Debris"):AddItem(beam, 0.1)
+	
+		if hit and hit.Parent:FindFirstChild("Humanoid") then
+			hit.Parent.Humanoid:TakeDamage(25)
+		end
+	end
+end
+
+mouse.Button1Down:connect(function()
+	mouseDown = true
+	auto()
+end)
+
+mouse.Button1Up:connect(function()
+	mouseDown = false
+end)
+
+tool.Equipped:connect(function()
+	equipped = true
+end)
+
+tool.Unequipped:connect(function()
+	equipped = false
+end)
+   end)
+script20.MouseButton1Click:Connect(function()
+
+
+
+-- [ AK47 FULL SCRIPT - COMPLETE VERSION ] -- LocalScript
+
+local Players = game:GetService("Players")
+local UserInputService = game:GetService("UserInputService")
+local Debris = game:GetService("Debris")
+
+local player = Players.LocalPlayer
+local mouse = player:GetMouse()
+local camera = workspace.CurrentCamera
+local char = player.Character or player.CharacterAdded:Wait()
+local humanoid = char:WaitForChild("Humanoid")
+
+-- Ammo Values
+local maxAmmo = 30
+local currentAmmo = Instance.new("IntValue", player)
+currentAmmo.Name = "CurrentAmmo"
+currentAmmo.Value = maxAmmo
+
+local reserveAmmo = Instance.new("IntValue", player)
+reserveAmmo.Name = "ReserveAmmo"
+reserveAmmo.Value = 210
+
+local reloading = false
+local equipped = false
+
+-- GUI: Ammo
+local gui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+gui.Name = "AmmoGui"
+
+local ammoLabel = Instance.new("TextLabel", gui)
+ammoLabel.Size = UDim2.new(0.2, 0, 0.1, 0)
+ammoLabel.Position = UDim2.new(0.75, 0, 0.05, 0)
+ammoLabel.BackgroundColor3 = Color3.new(0, 0, 0)
+ammoLabel.BackgroundTransparency = 0.3
+ammoLabel.TextColor3 = Color3.new(1, 1, 1)
+ammoLabel.TextScaled = true
+ammoLabel.Font = Enum.Font.SourceSansBold
+ammoLabel.Text = "Ammo: -- / --"
+
+-- GUI: Crosshair
+local crossGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+crossGui.Name = "CrosshairGui"
+
+local cross = Instance.new("Frame", crossGui)
+cross.Size = UDim2.new(0, 4, 0, 4)
+cross.Position = UDim2.new(0.5, -2, 0.5, -2)
+cross.BackgroundColor3 = Color3.new(1, 0, 0)
+cross.BorderSizePixel = 0
+cross.ZIndex = 100
+
+-- GUI: Character voice label
+local talkGui = Instance.new("BillboardGui", char:WaitForChild("Head"))
+talkGui.Size = UDim2.new(0, 200, 0, 50)
+talkGui.StudsOffset = Vector3.new(0, 2.5, 0)
+talkGui.AlwaysOnTop = true
+
+local talkLabel = Instance.new("TextLabel", talkGui)
+talkLabel.Size = UDim2.new(1, 0, 1, 0)
+talkLabel.BackgroundTransparency = 1
+talkLabel.TextColor3 = Color3.new(1, 1, 1)
+talkLabel.TextScaled = true
+talkLabel.Font = Enum.Font.GothamBold
+talkLabel.Text = ""
+
+local function say(text, duration)
+    talkLabel.Text = text
+    task.delay(duration or 1.5, function()
+        talkLabel.Text = ""
+    end)
+end
+local infoLabel = Instance.new("TextLabel", gui)
+infoLabel.Size = UDim2.new(0, 200, 0, 40)
+infoLabel.Position = UDim2.new(0, 10, 1, -90)  -- góc trái dưới
+infoLabel.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+infoLabel.BackgroundTransparency = 0.5
+infoLabel.TextColor3 = Color3.new(1, 1, 1)
+infoLabel.Font = Enum.Font.GothamBold
+infoLabel.TextSize = 18
+infoLabel.Text = "by gojohdkaisenkt"
+
+-- ImageLabel (vũ khí)
+local weaponImage = Instance.new("ImageLabel", gui)
+weaponImage.Size = UDim2.new(0, 80, 0, 80)
+weaponImage.Position = UDim2.new(0, 10, 1, -180) -- bên dưới infoLabel
+weaponImage.BackgroundTransparency = 1
+weaponImage.Image = "rbxassetid://123694661930746" -- ID mesh súng làm hình minh họa
+
+-- Button (hành động)
+local actionButton = Instance.new("TextButton", gui)
+actionButton.Size = UDim2.new(0, 120, 0, 40)
+actionButton.Position = UDim2.new(0, 10, 1, -230) -- bên dưới hình
+actionButton.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
+actionButton.TextColor3 = Color3.new(1, 1, 1)
+actionButton.Font = Enum.Font.GothamBold
+actionButton.TextSize = 18
+actionButton.Text = "idk"
+
+actionButton.MouseButton1Click:Connect(function()
+    print("Nút bắn thử được nhấn!")
+    -- Bạn có thể gọi hàm bắn ở đây nếu muốn
+end)
+
+
+
+-- Tool + Model
+local ak = Instance.new("Tool")
+ak.Name = "AK47"
+ak.RequiresHandle = true
+ak.CanBeDropped = false
+
+local meshHandle = Instance.new("MeshPart")
+meshHandle.Name = "Handle"
+meshHandle.Size = Vector3.new(0.6, 0.6, 0.6)
+meshHandle.MeshId = "rbxassetid://133126885373307"
+meshHandle.TextureID = "rbxassetid://92633447606267"
+meshHandle.CanCollide = false
+meshHandle.Anchored = false
+meshHandle.Parent = ak
+
+-- Sounds
+local fireSound = Instance.new("Sound", meshHandle)
+fireSound.SoundId = "rbxassetid://5910000043"
+fireSound.Volume = 1
+
+local reloadSound = Instance.new("Sound", meshHandle)
+reloadSound.SoundId = "rbxassetid://106029997216320"
+reloadSound.Volume = 1
+
+local shellLandSound = Instance.new("Sound")
+shellLandSound.SoundId = "rbxassetid://4223883783"
+shellLandSound.Volume = 1
+
+local killSounds = {
+    "rbxassetid://6108540937",
+    "rbxassetid://6108565657",
+    "rbxassetid://9125652432"
+}
+
+-- Effects
+local flash = Instance.new("PointLight", meshHandle)
+flash.Brightness = 10
+flash.Range = 6
+flash.Color = Color3.new(1, 1, 0.6)
+flash.Enabled = false
+
+local reloadAnim = Instance.new("Animation")
+reloadAnim.AnimationId = "rbxassetid://9425472915"
+local reloadTrack = humanoid:LoadAnimation(reloadAnim)
+
+-- Ammo UI update
+local function updateAmmo()
+    ammoLabel.Text = "Ammo: " .. currentAmmo.Value .. " / " .. reserveAmmo.Value .. "\n(Press R to reload)"
+end
+currentAmmo.Changed:Connect(updateAmmo)
+reserveAmmo.Changed:Connect(updateAmmo)
+updateAmmo()
+
+-- Shell ejection
+local function createShell()
+    local shell = Instance.new("Part")
+    shell.Size = Vector3.new(0.2, 0.4, 0.2)
+    shell.Shape = Enum.PartType.Cylinder
+    shell.BrickColor = BrickColor.new("Bright yellow")
+    shell.Material = Enum.Material.Metal
+    shell.CanCollide = true
+    shell.Anchored = false
+    shell.CFrame = meshHandle.CFrame * CFrame.new(-0.5, 0, 0) * CFrame.Angles(math.rad(90), 0, 0)
+    shell.Parent = workspace
+
+    local landed = false
+    shell.Touched:Connect(function(hit)
+        if landed then return end
+        if hit and hit.CanCollide and hit:IsDescendantOf(workspace) then
+            landed = true
+            local soundClone = shellLandSound:Clone()
+            soundClone.Parent = shell
+            soundClone:Play()
+            Debris:AddItem(shell, 5)
+        end
+    end)
+end
+
+-- Fire
+mouse.Button1Down:Connect(function()
+    if not equipped or reloading or currentAmmo.Value <= 0 then return end
+
+    currentAmmo.Value -= 1
+    fireSound:Play()
+    flash.Enabled = true
+    task.wait(0.05)
+    flash.Enabled = false
+
+    local origin = meshHandle.Position
+    local mousePos = mouse.Hit.Position
+    local direction = (mousePos - origin).Unit * 300
+
+    local params = RaycastParams.new()
+    params.FilterDescendantsInstances = {char}
+    params.FilterType = Enum.RaycastFilterType.Blacklist
+
+    local result = workspace:Raycast(origin, direction, params)
+    if result and result.Instance then
+        local model = result.Instance:FindFirstAncestorOfClass("Model")
+        if model and model:FindFirstChild("Humanoid") then
+            local humanoid = model:FindFirstChild("Humanoid")
+            local preHealth = humanoid.Health
+            humanoid:TakeDamage(25)
+            say("Headshot! 💥", 1)
+
+            task.delay(0.1, function()
+                if humanoid and humanoid.Health <= 0 and preHealth > 0 then
+                    local randomSound = killSounds[math.random(1, #killSounds)]
+                    local sfx = Instance.new("Sound")
+                    sfx.SoundId = randomSound
+                    sfx.Volume = 1
+                    sfx.Parent = workspace
+                    sfx:Play()
+                    Debris:AddItem(sfx, 3)
+                end
+            end)
+        end
+    end
+
+    local endPos = result and result.Position or (origin + direction)
+    local distance = (origin - endPos).Magnitude
+
+    local beam = Instance.new("Part")
+    beam.BrickColor = BrickColor.new("Bright yellow")
+    beam.FormFactor = Enum.FormFactor.Custom
+    beam.Material = Enum.Material.Neon
+    beam.Transparency = 0.25
+    beam.Anchored = true
+    beam.Locked = true
+    beam.CanCollide = false
+    beam.Size = Vector3.new(0.1, 0.1, distance)
+    beam.CFrame = CFrame.new(origin, endPos) * CFrame.new(0, 0, -distance / 2)
+    beam.Parent = workspace
+    Debris:AddItem(beam, 0.1)
+
+    createShell()
+end)
+
+-- Reload
+UserInputService.InputBegan:Connect(function(input, processed)
+    if processed or not equipped or reloading then return end
+    if input.KeyCode == Enum.KeyCode.R then
+        if currentAmmo.Value < maxAmmo and reserveAmmo.Value > 0 then
+            reloading = true
+            say("Reloading...", 1.5)
+            reloadSound:Play()
+            reloadTrack:Play()
+            task.wait(1.5)
+
+            local need = maxAmmo - currentAmmo.Value
+            local toReload = math.min(need, reserveAmmo.Value)
+            currentAmmo.Value += toReload
+            reserveAmmo.Value -= toReload
+
+            reloading = false
+        end
+    end
+end)
+
+-- Equip & Unequip handlers
+ak.Equipped:Connect(function()
+    equipped = true
+end)
+
+ak.Unequipped:Connect(function()
+    equipped = false
+end)
+
+-- Add to backpack
+ak.Parent = player:WaitForChild("Backpack")
+   end)

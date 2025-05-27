@@ -1,0 +1,151 @@
+
+
+
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local head = character:WaitForChild("Head")
+
+-- Tạo khối phát sáng
+local squarePart = Instance.new("Part")
+squarePart.Size = Vector3.new(5, 0.1, 10)
+squarePart.Anchored = true
+squarePart.CanCollide = false
+squarePart.Material = Enum.Material.Neon
+squarePart.Color = Color3.fromRGB(50, 50, 50)
+squarePart.Transparency = 0.5
+squarePart.Name = "SquareLight"
+squarePart.Parent = workspace
+
+-- Đèn
+local squareLight = Instance.new("PointLight")
+squareLight.Brightness = 4
+squareLight.Range = 12
+squareLight.Enabled = false
+squareLight.Parent = squarePart
+
+-- Logic hover và di chuyển bên vai phải, xoay mặt Top hướng về player, không che player
+local isLocked = false
+local function updateSquarePosition()
+	if not isLocked then
+		local headCF = head.CFrame
+		local rightVector = headCF.RightVector
+		local upVector = headCF.UpVector
+
+		-- Dời GUI ra phía sau + bên vai phải + cao lên, tránh che player
+		local targetPos = head.Position + rightVector * 3.5 - headCF.LookVector * 6 + upVector * 2.5
+		local lookVector = (head.Position - targetPos).Unit
+		local targetCFrame = CFrame.new(targetPos, targetPos + lookVector)
+
+		-- Nghiêng mặt top để nhìn player
+		targetCFrame = targetCFrame * CFrame.Angles(math.rad(-90), -30, 0)
+
+		local smoothFactor = 0.15
+		squarePart.CFrame = squarePart.CFrame:Lerp(targetCFrame, smoothFactor)
+	end
+end
+
+game:GetService("RunService").RenderStepped:Connect(function()
+	updateSquarePosition()
+end)
+
+-- GUI 2D trên màn hình: Toggle Light & Lock
+local screenGui = Instance.new("ScreenGui", player:WaitForChild("PlayerGui"))
+
+local toggleButton = Instance.new("TextButton")
+toggleButton.Size = UDim2.new(0.2, 0, 0.05, 0)
+toggleButton.Position = UDim2.new(0.4, 0, 0.85, 0)
+toggleButton.Text = "Toggle Square Light"
+toggleButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleButton.Font = Enum.Font.GothamBold
+toggleButton.TextScaled = true
+toggleButton.Parent = screenGui
+
+local lockButton = Instance.new("TextButton")
+lockButton.Size = UDim2.new(0.2, 0, 0.05, 0)
+lockButton.Position = UDim2.new(0.4, 0, 0.75, 0)
+lockButton.Text = "Lock Square"
+lockButton.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+lockButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+lockButton.Font = Enum.Font.GothamBold
+lockButton.TextScaled = true
+lockButton.Parent = screenGui
+
+toggleButton.MouseButton1Click:Connect(function()
+	squareLight.Enabled = not squareLight.Enabled
+	if squareLight.Enabled then
+		squarePart.Color = Color3.fromRGB(255, 255, 255)
+		squarePart.Transparency = 0
+		toggleButton.Text = "Square Light On"
+	else
+		squarePart.Color = Color3.fromRGB(0, 0, 0)
+		squarePart.Transparency = 0.5
+		toggleButton.Text = "Square Light Off"
+	end
+end)
+
+lockButton.MouseButton1Click:Connect(function()
+	isLocked = not isLocked
+	lockButton.Text = isLocked and "Unlock Square" or "Lock Square"
+end)
+
+-- SurfaceGui kiểu 1x1x1x1 gắn vào mặt Top của squarePart
+local surfaceGui = Instance.new("SurfaceGui")
+surfaceGui.Name = "OneX1X1X1Gui"
+surfaceGui.Face = Enum.NormalId.Top
+surfaceGui.AlwaysOnTop = true
+surfaceGui.SizingMode = Enum.SurfaceGuiSizingMode.PixelsPerStud
+surfaceGui.PixelsPerStud = 30
+surfaceGui.LightInfluence = 0
+surfaceGui.Parent = squarePart
+
+local frame = Instance.new("Frame", surfaceGui)
+frame.Size = UDim2.new(0, 300, 0, 160)
+frame.Position = UDim2.new(0, 0, 0, 0)
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BorderColor3 = Color3.fromRGB(0, 191, 255)
+frame.BorderSizePixel = 3
+
+local title = Instance.new("TextLabel", frame)
+title.Size = UDim2.new(1, 0, 0, 30)
+title.BackgroundColor3 = Color3.fromRGB(135, 206, 235)
+title.Text = "1x1x1x1 executor"
+title.TextColor3 = Color3.new(0, 0, 0)
+title.Font = Enum.Font.GothamBold
+title.TextScaled = true
+
+local box = Instance.new("TextBox", frame)
+box.Size = UDim2.new(0.9, 0, 0, 60)
+box.Position = UDim2.new(0.05, 0, 0.25, 0)
+box.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+box.TextColor3 = Color3.fromRGB(0, 255, 0)
+box.Text = "require(1x1x1x1x1).load(\"1x1x1x1 was here\")"
+box.Font = Enum.Font.Code
+box.TextSize = 16
+box.TextWrapped = true
+box.TextYAlignment = Enum.TextYAlignment.Top
+box.ClearTextOnFocus = false
+box.MultiLine = true
+
+local function createButton(text, pos, callback)
+	local btn = Instance.new("TextButton", frame)
+	btn.Size = UDim2.new(0, 90, 0, 30)
+	btn.Position = pos
+	btn.Text = text
+	btn.Font = Enum.Font.GothamBold
+	btn.TextScaled = true
+	btn.TextColor3 = Color3.fromRGB(0, 0, 0)
+	btn.BackgroundColor3 = Color3.fromRGB(0, 191, 255)
+	btn.MouseButton1Click:Connect(callback)
+end
+
+createButton("Execute", UDim2.new(0.05, 0, 0.7, 0), function()
+    end)
+
+createButton("Clear", UDim2.new(0.37, 0, 0.7, 0), function()
+	box.Text = ""
+end)
+
+createButton("Scan", UDim2.new(0.7, 0, 0.7, 0), function()
+
+end)
